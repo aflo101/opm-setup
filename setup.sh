@@ -21,7 +21,6 @@ fi
 echo -n "Enter Cyberark administrator password:"
 read -s ADMIN_PW
 echo
-# ADMIN_PW="Cyberark1"
 
 # set some constants
 #ip4=$(/sbin/ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1)
