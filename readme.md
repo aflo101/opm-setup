@@ -5,7 +5,7 @@ In CyberArk
 	Create opm_users group. (ex. opm_users - gives your users ability to adbridge and pimsu on Linux hosts)
 		Create a local user (your ADbridge user) and add this user to opm_users group.
 
-In config.ini (on OPM server)
+In config.conf (on OPM server)
 	Set $PVWA (ex. components.cyberarkdemo.com - NO HTTPS)
 	Set $ADMIN_UN (ex. administrator - LOGOFF PRIVATEARK CLIENT)
 	Set $OPM_GRP (ex. opm_agents)
@@ -14,6 +14,7 @@ In config.ini (on OPM server)
 	Set $VAULTIP (ex. 10.0.1.10)
 
 On local host
+	unzip OPM (RHELLinux...zip) into this directory.
 	vi /etc/ssh/sshd_config - ChallengeResponseAuthentication yes (allows PAM password authentication)
 	
 Run setup.sh (as root or with sudo)

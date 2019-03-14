@@ -3,18 +3,23 @@ if ["$1" = ""]; then
 	echo "Please specify config.ini"
 	exit; 
 else
-	readarray -t line < $1
+	CONFIG=$(cut -d$'\n' -f1 $1 | cut -d "=" -f2)
+
+	line=( $CONFIG )
+	#readarray -t line < $1
 	PVWA=${line[0]}
 	ADMIN_UN=${line[1]}
 	OPM_GRP=${line[2]}
 	TARGET_SAFE=${line[3]}
-	TARGET_USER=${line[4]};
+	TARGET_USER=${line[4]}
+	VAULTIP=${line[5]};
 fi
 
 # ask for admin password to connect PVWA REST
-echo -n "Enter Cyberark administrator password:"
-read -s ADMIN_PW
-echo
+# echo -n "Enter Cyberark administrator password:"
+# read -s ADMIN_PW
+# echo
+ADMIN_PW="Cyberark1"
 
 # install dependencies
 if [ ! -f /usr/bin/jq ]; then

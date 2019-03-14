@@ -1,9 +1,14 @@
-# read config.ini
-if ["$1" = ""]; then 
-	echo "Please specify config.ini"
+#!/bin/bash
+
+# read config.conf
+if [$1 = ""]; then 
+	echo "Please specify config.conf"
 	exit; 
 else
-	readarray -t line < $1
+	CONFIG=$(cut -d$'\n' -f1 $1 | cut -d "=" -f2) 
+
+	line=( $CONFIG )
+	#readarray -t line < $1
 	PVWA=${line[0]}
 	ADMIN_UN=${line[1]}
 	OPM_GRP=${line[2]}
@@ -13,12 +18,14 @@ else
 fi
 
 # ask for admin password to connect PVWA REST
-echo -n "Enter Cyberark administrator password:"
-read -s ADMIN_PW
-echo
+# echo -n "Enter Cyberark administrator password:"
+# read -s ADMIN_PW
+# echo
+ADMIN_PW="Cyberark1"
 
 # set some constants
-ip4=$(/sbin/ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1)
+#ip4=$(/sbin/ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1)
+ip4="$HOSTNAME"
 PLATFORM="UnixSSH"
 ACCT_NAME="Operating System-$PLATFORM-$ip4-$TARGET_USER"
 ROOT_ACCT_NAME="Operating System-$PLATFORM-$ip4-root"
