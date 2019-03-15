@@ -3,7 +3,7 @@ In CyberArk
 	Create opm_agents group (ex. opm_agents - this is your $OPM_GRP).
 		Give your opm_agents group permissions to read/list/use passswords on your Linux safe ($TARGET_SAFE).
 	Create opm_users group. (ex. opm_users - gives your users ability to adbridge and pimsu on Linux hosts)
-		Create a local user (your ADbridge user) and add this user to opm_users group.
+		Create a local user (your ADbridge user) and add this user to opm_users group. Give your opm_users group read/list/use on Linux safe
 
 In config.conf (on OPM server)
 	Set $PVWA (ex. components.cyberarkdemo.com - NO HTTPS)
