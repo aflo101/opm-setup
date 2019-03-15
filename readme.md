@@ -24,5 +24,5 @@ Reboot linux server after completion
 	sudo reboot now
 	
 Test!
-	{your ADBridge user]@{opmhost}
+	{your ADBridge user}@{opmhost}
 	ex: alex@rhel02
