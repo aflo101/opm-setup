@@ -18,9 +18,10 @@ else
 fi
 
 # ask for admin password to connect PVWA REST
-echo -n "Enter Cyberark administrator password:"
-read -s ADMIN_PW
-echo
+# echo -n "Enter Cyberark administrator password:"
+# read -s ADMIN_PW
+# echo
+ADMIN_PW="Cyberark1"
 
 # set some constants
 #ip4=$(/sbin/ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1)
@@ -68,9 +69,14 @@ tail -24 ./RHELinux-Intel64/aimparms.sample >> /var/tmp/aimparms
 cp ./RHELinux-Intel64/Vault.ini ./RHELinux-Intel64/Vault.tmp
 head -n 1 ./RHELinux-Intel64/Vault.ini > ./RHELinux-Intel64/Vault.tmp
 echo "ADDRESS=$VAULTIP" >> ./RHELinux-Intel64/Vault.tmp
-tail -33 ./RHELinux-Intel64/Vault.ini >> ./RHELinux-Intel64/Vault.tmp
+tail -n 33 RHELinux-Intel64/Vault.ini | head -n 26 >> ./RHELinux-Intel64/Vault.tmp
+echo "PREAUTHSECUREDSESSION=YES	       - Enable pre authentication secured session" >> ./RHELinux-Intel64/Vault.tmp
+echo "TRUSTSSC=YES			           - Trust self-sign certificates in pre authentication secured session" >> ./RHELinux-Intel64/Vault.tmp
+echo "ALLOWSSCFOR3PARTYAUTH=NO	       - Are self-sign certificates allowed for 3rd party authentication (like RADIUS) " >> ./RHELinux-Intel64/Vault.tmp
+tail -n 4 ./RHELinux-Intel64/Vault.ini >> ./RHELinux-Intel64/Vault.tmp
+
 cp RHELinux-Intel64/Vault.tmp RHELinux-Intel64/Vault.ini
-rm RHELinux-Intel64/Vault.tmp
+#rm RHELinux-Intel64/Vault.tmp
 
 # install OPM and PAM
 rpm -ivh ./RHELinux-Intel64/CARKaim*
