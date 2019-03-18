@@ -69,6 +69,7 @@ tail -24 ./RHELinux-Intel64/aimparms.sample >> /var/tmp/aimparms
 cp ./RHELinux-Intel64/Vault.ini ./RHELinux-Intel64/Vault.tmp
 head -n 1 ./RHELinux-Intel64/Vault.ini > ./RHELinux-Intel64/Vault.tmp
 echo "ADDRESS=$VAULTIP" >> ./RHELinux-Intel64/Vault.tmp
+echo "PORT=1858" >> ./RHELinux-Intel64/Vault.tmp
 tail -n 33 RHELinux-Intel64/Vault.ini | head -n 26 >> ./RHELinux-Intel64/Vault.tmp
 echo "PREAUTHSECUREDSESSION=YES	       - Enable pre authentication secured session" >> ./RHELinux-Intel64/Vault.tmp
 echo "TRUSTSSC=YES			           - Trust self-sign certificates in pre authentication secured session" >> ./RHELinux-Intel64/Vault.tmp
