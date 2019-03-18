@@ -26,3 +26,7 @@ Reboot linux server after completion
 Test!
 	{your ADBridge user}@{opmhost}
 	ex: alex@rhel02
+	
+
+Set PVWAIP to bound URL
+
