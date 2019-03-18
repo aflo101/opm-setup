@@ -16,10 +16,10 @@ else
 fi
 
 # ask for admin password to connect PVWA REST
-# echo -n "Enter Cyberark administrator password:"
-# read -s ADMIN_PW
-# echo
-ADMIN_PW="Cyberark1"
+echo -n "Enter Cyberark administrator password:"
+read -s ADMIN_PW
+echo
+# ADMIN_PW="Cyberark1"
 
 # install dependencies
 if [ ! -f /usr/bin/jq ]; then
