@@ -42,6 +42,7 @@ CRED_LOC="$PWD/RHELinux-Intel64/user.cred"
 VAULT_LOC="$PWD/RHELinux-Intel64/Vault.ini"
 
 # install dependencies
+yum install policycoreutils-python -y
 yum install redhat-lsb -y
 if [ ! -f /usr/bin/jq ]; then
         echo "No jq found. Copying"
