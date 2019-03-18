@@ -76,7 +76,7 @@ echo "ALLOWSSCFOR3PARTYAUTH=YES	       - Are self-sign certificates allowed for 
 tail -n 4 ./RHELinux-Intel64/Vault.ini >> ./RHELinux-Intel64/Vault.tmp
 
 cp RHELinux-Intel64/Vault.tmp RHELinux-Intel64/Vault.ini
-#rm RHELinux-Intel64/Vault.tmp
+rm RHELinux-Intel64/Vault.tmp
 
 # install OPM and PAM
 rpm -ivh ./RHELinux-Intel64/CARKaim*
