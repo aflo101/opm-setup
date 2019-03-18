@@ -72,7 +72,7 @@ echo "ADDRESS=$VAULTIP" >> ./RHELinux-Intel64/Vault.tmp
 tail -n 33 RHELinux-Intel64/Vault.ini | head -n 26 >> ./RHELinux-Intel64/Vault.tmp
 echo "PREAUTHSECUREDSESSION=YES	       - Enable pre authentication secured session" >> ./RHELinux-Intel64/Vault.tmp
 echo "TRUSTSSC=YES			           - Trust self-sign certificates in pre authentication secured session" >> ./RHELinux-Intel64/Vault.tmp
-echo "ALLOWSSCFOR3PARTYAUTH=NO	       - Are self-sign certificates allowed for 3rd party authentication (like RADIUS) " >> ./RHELinux-Intel64/Vault.tmp
+echo "ALLOWSSCFOR3PARTYAUTH=YES	       - Are self-sign certificates allowed for 3rd party authentication (like RADIUS) " >> ./RHELinux-Intel64/Vault.tmp
 tail -n 4 ./RHELinux-Intel64/Vault.ini >> ./RHELinux-Intel64/Vault.tmp
 
 cp RHELinux-Intel64/Vault.tmp RHELinux-Intel64/Vault.ini
