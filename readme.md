@@ -13,12 +13,12 @@ Create a local user (your ADbridge user) and add this user to opm_users group. G
 
 In config.conf (on OPM server) IMPORTANT: CONFIG.CONF DOESN'T LIKE VALUES WITH SPACES. TRY TO AVOID FOR NOW.
 	
-	Set $PVWA (ex. components.cyberarkdemo.com - NO HTTPS)
-	Set $ADMIN_UN (ex. administrator - LOGOFF PRIVATEARK CLIENT)
-	Set $OPM_GRP (ex. opm_agents)
-	Set $TARGET_SAFE (ex. Linux-Root)
-	Set $TARGET_USER (ex. logon)
-	Set $VAULTIP (ex. 10.0.1.10)
+	PVWA=(ex. components.cyberarkdemo.com - NO HTTPS)
+	ADMIN_UN= (ex. administrator - LOGOFF PRIVATEARK CLIENT)
+	OPM_GRP= (ex. opm_agents)
+	TARGET_SAFE= (ex. Linux-Root)
+	TARGET_USER= (ex. logon)
+	VAULTIP= (ex. 10.0.1.10)
 
 On local host
 	
