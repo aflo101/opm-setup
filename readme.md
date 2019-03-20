@@ -23,7 +23,7 @@ In config.conf (on OPM server) IMPORTANT: CONFIG.CONF DOESN'T LIKE VALUES WITH S
 On local host
 	
 	unzip OPM (RHELLinux...zip) into this directory.
-	vi /etc/ssh/sshd_config - ChallengeResponseAuthentication yes (allows PAM password authentication)
+	vi /etc/ssh/sshd_config - ChallengeResponseAuthentication yes (allows PAM password authentication. also verify AllowPAM is set to yes)
 	
 Run setup.sh (as root or with sudo)
 	
