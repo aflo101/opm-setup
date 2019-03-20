@@ -13,7 +13,7 @@ In CyberArk (this portion refers to using local CyberArk groups for psuedo-AD Br
 
 In config.conf (on OPM server) IMPORTANT: CONFIG.CONF DOESN'T LIKE VALUES WITH SPACES. TRY TO AVOID FOR NOW.
 	
-	PVWA=(ex. components.cyberarkdemo.com - NO HTTPS)
+	PVWA= (ex. components.cyberarkdemo.com - No HTTPS, just FQDN or however the host is bound in IIS)
 	ADMIN_UN= (ex. administrator - LOGOFF PRIVATEARK CLIENT)
 	OPM_GRP= (ex. opm_agents)
 	TARGET_SAFE= (ex. Linux-Root)
